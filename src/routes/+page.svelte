@@ -1,4 +1,8 @@
 <script lang="ts">
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+
 	const gestures: string[] = ['open', 'peace', 'rock', 'thumb', 'ok', 'middle'];
 
 	const randomGestures = gestures.filter((item) => item !== 'middle');
@@ -68,7 +72,7 @@
 		</a>
 		<iframe
 			class="w-[80vw] h-[50vw] mt-10"
-			src="https://www.youtube.com/embed/Uj1ykZWtPYI"
+			src={data.youtube_link}
 			title="YouTube video player"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; modestbranding;"
