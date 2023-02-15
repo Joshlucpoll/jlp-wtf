@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { longpress } from '../utilities/actions';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 
@@ -42,6 +44,8 @@
 			{/each}
 		{/each}
 		<img
+			use:longpress={2000}
+			on:longpress={(e) => goto('/edit')}
 			class="relative -top-[6vw] mx-auto w-[10vw]"
 			src={`/qr/${currentFrame}.svg`}
 			alt="qr code"
