@@ -31,7 +31,7 @@
 		src={`/name/${currentFrame}.svg`}
 		alt="Josh Pollard"
 	/>
-	<button class="mx-auto mt-24 [-webkit-tap-highlight-color:transparent]" on:click={changeGesture}>
+	<button class="mx-auto mt-24 [-webkit-tap-highlight-color:transparent]" type="button" on:click={changeGesture}>
 		{#each gestures as gesture}
 			{#each [1, 2, 3] as frame}
 				<img
